@@ -5,7 +5,7 @@
 #
 
 BOARD_VENDOR := realme
-DEVICE_PATH := device/realme/xt
+DEVICE_PATH := device/realme/RMX1921
 
 #Broken Rules
 BUILD_BROKEN_DUP_RULES := true
@@ -51,10 +51,6 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CLANG_COMPILE := true
   TARGET_KERNEL_SOURCE := kernel/realme/RMX1921
 endif
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
-
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sdm710
@@ -172,4 +168,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
 
 # Inherit from the proprietary version
--include vendor/realme/xt/BoardConfigVendor.mk
+-include vendor/realme/RMX1921/BoardConfigVendor.mk
