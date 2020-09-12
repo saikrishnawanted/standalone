@@ -6,11 +6,8 @@
 
 $(call inherit-product, device/realme/RMX1921/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
 PRODUCT_DEVICE := RMX1921
-PRODUCT_NAME := lineage_RMX1921
+PRODUCT_NAME := aosp_RMX1921
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := Realme XT
 PRODUCT_MANUFACTURER := Realme
